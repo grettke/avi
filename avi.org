@@ -698,6 +698,10 @@ Start EMACS normally.
 
 *** TODO Should the setup script be idempotent?
 
+** TODO Configuration
+
+This document tangles itself. Org-Mode's configuration needs to come early.
+
 * TODO Accessibility
 
 ** TODO Philosophy
