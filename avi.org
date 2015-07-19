@@ -11,6 +11,11 @@
 Humans like to see things in order. With Noweb-Ref we can structure and tangle in any order
 that want. Use your discretion. Assume more notes will follow.
 ** TODO Style Guide
+*** TODO Header Arguments
+- Document level are all upper case
+- Heading level are upper case for the parent block and all lower case for the child block.
+  Assuming that it is only ever one level of parent-child.
+- Source block level are all lower case
 *** TODO Headings
 - Completed headings
   - Transitioned out from =DONE=
