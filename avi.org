@@ -2183,7 +2183,7 @@ provide information about them. This holds true to her file-based worldview.
 
 1) Choose "quiet" tones that minimize eye strain
 
-** TODO Insert and manage Fonts2.org
+** TODO Font
 
 # -- Latex template
 #+DATE: <2014-02-24 MON>
@@ -2193,7 +2193,7 @@ provide information about them. This holds true to her file-based worldview.
 #+LATEX_HEADER: \usepackage[paperwidth=8.5in, paperheight=11in, hmargin=0.5in, vmargin=0.5in]{geometry}
 #+LATEX_HEADER_EXTRA:
 
-* Introduction
+*** Introduction
 
 Choosing my font for ALEC has been a journey. Gosh, that is a very serious word.
 It has been a /learning experience/. I never questioned font choice before. Font
@@ -2201,7 +2201,7 @@ design is an art form. Font choice is an art form, too. I learned something.
 
 The purpose of this document is to capture parts of that journey that I valued.
 
-* Audience
+*** Audience
 
 - Computer
   - Users
@@ -2226,13 +2226,13 @@ the best for me. Hopefully the notes alone are revealing and help you reach your
 own conclusion, too. At the very least you ought to be educated, informed, and
 probably surprised, too, about some of the factors involved in font selection.
 
-* Resources
+*** Resources
 
 I started researching fonts using Internet search engines. I found a bunch of
 resources. I read all of them and took notes. This heading captures addresses to
 those resources and notes about them.
 
-** [[http://thenextweb.com/dd/2011/03/02/whats-the-most-readable-font-for-the-screen/][What’s the most readable font for the screen?]]
+**** [[http://thenextweb.com/dd/2011/03/02/whats-the-most-readable-font-for-the-screen/][What’s the most readable font for the screen?]]
 
 Serifs are tips for the reader's eyes for flow.
 
@@ -2253,7 +2253,7 @@ Both, Calibri
 San-serifs are easier on the eyes as you get older, citing retinal tears
 specifically
 
-** [[http://www.webpagecontent.com/arc_archive/182/5/][Time to change your fonts]]
+**** [[http://www.webpagecontent.com/arc_archive/182/5/][Time to change your fonts]]
 
 Designed for screen: Verdana, Trebuchet MS, and (the serif) Georgia.
 
@@ -2264,7 +2264,7 @@ Let go of times new roman, Arial, and Helvetica.
 Traditionally a serif font was used for the main body of a document, and
 sans-serif for headings. Today, those principles are often reversed.
 
-** [[http://www.awaionline.com/2011/10/the-best-fonts-to-use-in-print-online-and-email/][The Best Fonts to Use in Print, Online, and Email]]
+**** [[http://www.awaionline.com/2011/10/the-best-fonts-to-use-in-print-online-and-email/][The Best Fonts to Use in Print, Online, and Email]]
 
 Popular serif fonts are Times New Roman, Palatino, Georgia, Courier,
 Bookman and Garamond.
@@ -2307,7 +2307,7 @@ Comments: Good.
 
 My comments: no links to cited papers
 
-** [[https://tex.stackexchange.com/questions/20149/which-font-is-the-most-comfortable-for-on-screen-viewing][Which font is the most comfortable for on-screen viewing?]]
+**** [[https://tex.stackexchange.com/questions/20149/which-font-is-the-most-comfortable-for-on-screen-viewing][Which font is the most comfortable for on-screen viewing?]]
 
 Post: Advice to use san-serif is outdated and inappropriate for today's
 high resolution screens. San-serif or not is irrelevant; instead the
@@ -2321,15 +2321,15 @@ there yet, but rather getting close.
 
 Post: Sans-serif are best for on-screen.
 
-** [[http://www.google.com/fonts/specimen/Vollkorn][Vollkorn]]
+**** [[http://www.google.com/fonts/specimen/Vollkorn][Vollkorn]]
 
-** [[http://www.google.com/fonts/specimen/Droid+Serif][Droid Serif]]
+**** [[http://www.google.com/fonts/specimen/Droid+Serif][Droid Serif]]
 
-** [[http://river-valley.zeeba.tv/minion-math-a-new-math-font-family/][The Design of a New Math Font Family]]
+**** [[http://river-valley.zeeba.tv/minion-math-a-new-math-font-family/][The Design of a New Math Font Family]]
 
 Interesting.
 
-** [[http://edutechwiki.unige.ch/en/Font_readability][Font readability]]
+**** [[http://edutechwiki.unige.ch/en/Font_readability][Font readability]]
 
 Legibility refers to being able to read a text in bad conditions.
 “Legibility is concerned with the very fine details of typeface design,
@@ -2362,25 +2362,25 @@ In her study: Calibri came out as a winner against Courier New and Curlz.
 
 GCR: Very exciting and interesting with good links
 
-** [[http://usabilitynews.org/the-effect-of-typeface-on-the-perception-of-email/][The Effect of Typeface on the Perception of Email]]
+**** [[http://usabilitynews.org/the-effect-of-typeface-on-the-perception-of-email/][The Effect of Typeface on the Perception of Email]]
 
 People take Calibri seriously via this study.
 
-** [[http://usabilitynews.org/know-your-typefaces-semantic-differential-presentation-of-40-onscreen-typefaces/][Know Your Typefaces! Semantic Differential Presentation of 40 Onscreen Typefaces]]
+**** [[http://usabilitynews.org/know-your-typefaces-semantic-differential-presentation-of-40-onscreen-typefaces/][Know Your Typefaces! Semantic Differential Presentation of 40 Onscreen Typefaces]]
 
 Study showing how people emotionally react to certain fonts.
 
-** [[http://typoface.blogspot.com/2009/08/academic-base.html][The Academic Evidence Base for Typeface Readability]]
+**** [[http://typoface.blogspot.com/2009/08/academic-base.html][The Academic Evidence Base for Typeface Readability]]
 
 Study.
 
 Young people like serif; older like sans-serif.
 
-** [[http://liinwww.ira.uka.de/bibliography/Typesetting/reading.html][Bibliography on font readability]]
+**** [[http://liinwww.ira.uka.de/bibliography/Typesetting/reading.html][Bibliography on font readability]]
 
 Links to papers on font readability.
 
-** [[http://www.kathymarks.com/archives/2006/11/best_fonts_for_the_web_1.html][Best Fonts for the Web]]
+**** [[http://www.kathymarks.com/archives/2006/11/best_fonts_for_the_web_1.html][Best Fonts for the Web]]
 
 Serif: Georgia. It was designed especially for screen. Other options are
 listed.
@@ -2393,11 +2393,11 @@ Monospaced: Monaco/Lucida Console.
 
 GCR: Great article.
 
-** [[http://psychology.wichita.edu/surl/usabilitynews/52/uk_font.htm][A Comparison of Two Computer Fonts: Serif versus Ornate Sans Serif]]
+**** [[http://psychology.wichita.edu/surl/usabilitynews/52/uk_font.htm][A Comparison of Two Computer Fonts: Serif versus Ornate Sans Serif]]
 
 Another study, unsure what to conclude from it.
 
-** [[http://usabilitynews.org/a-comparison-of-popular-online-fonts-which-size-and-type-is-best/][A Comparison of Popular Online Fonts: Which Size and Type is Best?]]
+**** [[http://usabilitynews.org/a-comparison-of-popular-online-fonts-which-size-and-type-is-best/][A Comparison of Popular Online Fonts: Which Size and Type is Best?]]
 
 Excellent details.
 
@@ -2408,7 +2408,7 @@ wider than Verdana.
 Great article but leaves so many questions and stuff unanswered and
 explored.
 
-** [[http://usabilitynews.org/a-comparison-of-popular-online-fonts-which-is-best-and-when/][A Comparison of Popular Online Fonts: Which is Best and When?]]
+**** [[http://usabilitynews.org/a-comparison-of-popular-online-fonts-which-is-best-and-when/][A Comparison of Popular Online Fonts: Which is Best and When?]]
 
 Big fonts generally don't matter and are easy to read.
 
@@ -2421,7 +2421,7 @@ fun, business-like,
 
 Most legible: Courier, Comic, Verdana, Georgia, and Times.
 
-** [[http://kadavy.net/blog/posts/design-for-hackers-why-you-dont-use-garamond-on-the-web/][Design for Hackers: Why You Don’t Use Garamond on The Web]]
+**** [[http://kadavy.net/blog/posts/design-for-hackers-why-you-dont-use-garamond-on-the-web/][Design for Hackers: Why You Don’t Use Garamond on The Web]]
 
 I only read this article months after reading the bulk of references in this
 section. It took time it to sink and for me to accept it. It is so easy to
@@ -2440,7 +2440,7 @@ word. I love something real that engages touch and smell in addition to sight.
 By that measure, I am my own target audience, and it is simple: printed
 literature will be done using Garamond.
 
-** [[http://www.webdesignerdepot.com/2013/03/serif-vs-sans-the-final-battle/][SERIF VS. SANS: THE FINAL BATTLE]]
+**** [[http://www.webdesignerdepot.com/2013/03/serif-vs-sans-the-final-battle/][SERIF VS. SANS: THE FINAL BATTLE]]
 
 I was curious again so I searched for articles to share with people who haven't
 done any research on the topic. I found this one. It is good. It "expertly
@@ -2455,7 +2455,7 @@ correspondence. Perhaps that is just fine? If it is kind sorta not super perfect
 on-screen, perhaps that is OK, because the printed, viewable, touchable, and
 smellable form will always be the most delightful.
 
-* Questions & Answers
+*** Questions & Answers
 
 The questions are simple.
 
@@ -2482,7 +2482,7 @@ power cord. This is an important medium.
 
 I want a good font for all 3 mediums.
 
-** Retrospective
+**** Retrospective
 
 This definition of 3 mediums became clear only later. It took time for me to
 understand them, the difference, and their value. Font decisions become to clear
@@ -2490,9 +2490,9 @@ once you understand your audience and your medium. That is when the fun starts
 skyrocketing. There is so much creativity in entire process. It is really all
 quite delightful.
 
-* Goals & Medium
+*** Goals & Medium
 
-** Literate Programming on a Computer
+**** Literate Programming on a Computer
 
 - Research
   - Emacs is the primary environment
@@ -2543,7 +2543,7 @@ quite delightful.
 - Decisions
   - DejaVu Sans Mono is the best available font
 
-** Publishing on a Computer
+**** Publishing on a Computer
 
 - Research
   - WordPress is the primary environment
@@ -2562,7 +2562,7 @@ quite delightful.
 - Decisions
   - Georgia is the best available font
 
-** IN-PROGRESS Correspondence on Printed Paper
+**** IN-PROGRESS Correspondence on Printed Paper
 
 - Research
   - TeX
@@ -2829,7 +2829,7 @@ quite delightful.
 
 - Decisions
 
-* TODO This
+*** TODO This
 
 - Add font names in here to my dictionary
 - Copy this document in publishing
