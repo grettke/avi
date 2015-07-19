@@ -38,7 +38,7 @@ observation and reproducibility. Those first steps were delightful and critical
 to making sense of many aspects of the world. In any valuable endeavor, sincere
 effort and willful-determination are required no matter the outcome. Those first
 investments appear below.
-*****  The Care And Conservation Of Computer Files (TC3F)
+***** TODO The Care And Conservation Of Computer Files (TC3F)
 
 #+begin_comment
 This section will never be tangled.
