@@ -1,5 +1,7 @@
 #+PROPERTY: header-args :tangle .emacs.el
+
 #+STARTUP: showeverything
+
 * TODO AVI
 
 ** TODO Philosophy
