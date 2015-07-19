@@ -654,6 +654,20 @@ that want. Use your discretion. Assume more notes will follow.
 ***** TODO Explain when to use one vs other
 
 * TODO Org-Mode
+* Start Up
+  :PROPERTIES:
+  :noweb-ref: Start-Up
+  :END:
+
+There are things that must occur during start… *before* everything else.
+
+Load the newer version of a file: bytecode or lisp. This says a lot. In the
+users guide it explains why you may want this turned off. That way you can
+develop code and try it out to see how it works and comare it to the old version
+which had been byte-compiled. I am not doing that here.
+#+begin_src emacs-lisp
+(setq load-prefer-newer t)
+#+end_src
 
 ** TODO Installation
 
