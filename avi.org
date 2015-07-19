@@ -61,6 +61,44 @@ that want. Use your discretion. Assume more notes will follow.
 ***** TODO Explain when to use one vs other
 * TODO Org-Mode
 ** TODO Installation
+*** TODO Bring in installation decision stuff from ALEC
+*** TODO Add reference to installation page
+*** TODO Clarify in detail why it is important to run off HEAD, link to accessibility
+*** TODO Explain how to make sure that you have the right Org-Mode loaded
+A virgin-installation of EMACS comes with Org-Mode already installed. It is stable, reliable, and
+predictable. It is a fine software product. AVI needs access to cutting edge features, immediate hot-fixes, and easy patch
+creation. The easiest way to do this is the "Using Org's git repository" option. Before you start this set up, find out what
+version of Org-Mode is built-in.
+
+Start EMACS with the =-Q= argument so that only the built-libraries are loaded. Open the =*scratch*= buffer and evaluate the 
+expression =(org-version)=. Note it because the  code will load a newer version of Org-Mode. Quit EMACS. 
+
+Follow these instructions in a terminal:
+- =cd ~=
+- =mkdir src=
+- =cd ~/src/=
+- =git clone git://orgmode.org/org-mode.git=
+- =cd org-mode/=
+- =make autoloads=
+
+Load the Org-Mode core distribution.
+
+#+begin_src emacs-lisp
+(add-to-list 'load-path "~/src/org-mode/lisp")
+#+end_src
+
+Load the Org-Mode-Contributions distribution.
+
+#+begin_src emacs-lisp
+(add-to-list 'load-path "~/src/org-mode/contrib/lisp")
+#+end_src
+
+Start EMACS normally. 
+
+*** TODO Decide if the setup steps should be tangled into a provisioning script to be executed before first-load. Consider
+    the OSX provsioning experiment
+*** TODO Can't remember the org-contrib package name, get it and update this documentation
+*** TODO Should the setup script be idempotent?
 * TODO Accessibility
 ** TODO Philosophy
 ** TODO Means
