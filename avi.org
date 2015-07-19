@@ -3016,6 +3016,7 @@ Use-Package will manage all of the package installations.
 (require 'use-package)
 #+end_src
 
+* TODO Helper Functions
 * TODO Org-Mode Post-Provisioning
 
 Load the =ob-sml= package. Perhaps some day it will end up in the mainline.
