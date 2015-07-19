@@ -1,6 +1,7 @@
 #+PROPERTY: header-args :tangle .emacs.el
 #+STARTUP: showeverything
 * TODO AVI
+
 ** TODO Philosophy
 
 We are all seekers. We are moved by an unseen gravity. Our path is illuminated
@@ -14,7 +15,9 @@ It has occurred in three stages:
 1) Touched by Willful Determination (Sankalpa [fn:a8dd9e04: https://en.wikipedia.org/wiki/Sankalpa_(Hindu_thought)])
 2) Absorbed by the Expression of Creativity (Unique Purusha [fn:7b0aa25c: https://en.wikipedia.org/wiki/Purusha])
 3) Unification With Infinite Inspiration (Universal Purusha)
+
 **** TODO Sankalpa
+
 When you hear the timeless whisper of Sankalpa, the inner-most chamber of your
 heart will hear it. Your heart will also heighten your attention to that whisper
 of love. Both will stay with you in the form of an infinite ember that is yours
@@ -38,6 +41,7 @@ observation and reproducibility. Those first steps were delightful and critical
 to making sense of many aspects of the world. In any valuable endeavor, sincere
 effort and willful-determination are required no matter the outcome. Those first
 investments appear below.
+
 ***** TODO The Care And Conservation Of Computer Files (TC3F)
 
 #+begin_comment
@@ -279,24 +283,39 @@ Where else has this acronym shown up?
 - Commander, U.S. Third Fleet :: WWII navy [fn:2e96ef97: https://secure.flickr.com/people/c3f/]
 - A spasmogenic fragment :: a peptide [fn:07d2fa50: http://books.google.com/books?id=L4CI-qkhuQ8C]
 
+
 **** TODO Unique Purusha
+
 **** TODO Universal Purursha
+
 *** TODO First Express Values, Then Define Means
+
 *** TODO Universal
+
 *** TODO Theory of Opposites
+
 *** TODO Representation of Decisions as Text in Storage
+
 *** TODO Time Space Causality Identity (TSCI)
+
 ** TODO Org-Mode
+
 *** TODO Should TSCI be Maintained in This Document?
+
 Humans like to see things in order. With Noweb-Ref we can structure and tangle in any order
 that want. Use your discretion. Assume more notes will follow.
+
 ** TODO Style Guide
+
 *** TODO Header Arguments
+
 - Document level are all upper case
 - Heading level are upper case for the parent block and all lower case for the child block.
   Assuming that it is only ever one level of parent-child.
 - Source block level are all lower case
+
 *** TODO Headings
+
 - Completed headings
   - Transitioned out from =DONE=
   - Don't end with punctuation
@@ -307,48 +326,77 @@ that want. Use your discretion. Assume more notes will follow.
 - Keep a single empty line before the start of the body of a heading and before
   the next heading. Org-Mode expects this formatting. Headings will collapse and
   expand as you expect.
+
 *** TODO List
+
 - Single sentence items end with a period
+
 *** TODO Names
+
 **** TODO Packages And Artifacts
+
   - Referenced in written-language
     - Reading font
     - Capitalize whole words
     - Separate spaces with a single dash
   - Acronyms remain all upper case to distinguish from words for example "GNU"
     vs "Gnu".
+
 **** TODO Code
+
 - Monospaced markup in-line and source-blocks
+
 **** TODO Features
+
 - Can be express either as a [[Package]] or [[Code]]
+
 *** TODO Source Blocks
+
 - Tell the story
 - Punctuate normally
 - After periods where a new paragraph would appear is a natural place for a source block
   that expresses that which was just communicated
   - Indent like any paragraph, with an empty line separating them
 - Only use a =:= when a list of blocks follows in the same way that you would format a list of text
+
 *** TODO Hyperlinks
+
 **** TODO Internal Links
+
 - If the resource is contained within this document then it is an internal link.
 - For a resource only linked once use a "text search" link
 - For a resource linked 2 or more times
   - Give an ID to the target
   - Link to that ID
+
 ***** TODO Document how to create random link IDs in the parent
+
 ***** TODO Add reference to http://orgmode.org/manual/Internal-links.html#Internal-links
+
 ***** TODO Add startup set to pull latest? Pros and cons of each.
+
 **** TODO External Links
+
 - If the resource is not contained within this document then it is an external link.
+
 ***** TODO Add reference to http://orgmode.org/manual/External-links.html#External-links
+
 ***** TODO Add reference to http://orgmode.org/manual/Footnotes.html
+
 ***** TODO Explain when to use one vs other
+
 * TODO Org-Mode
+
 ** TODO Installation
+
 *** TODO Bring in installation decision stuff from ALEC
+
 *** TODO Add reference to installation page
+
 *** TODO Clarify in detail why it is important to run off HEAD, link to accessibility
+
 *** TODO Explain how to make sure that you have the right Org-Mode loaded
+
 A virgin-installation of EMACS comes with Org-Mode already installed. It is stable, reliable, and
 predictable. It is a fine software product. AVI needs access to cutting edge features, immediate hot-fixes, and easy patch
 creation. The easiest way to do this is the "Using Org's git repository" option. Before you start this set up, find out what
@@ -381,20 +429,35 @@ Start EMACS normally.
 
 *** TODO Decide if the setup steps should be tangled into a provisioning script to be executed before first-load. Consider
     the OSX provsioning experiment
+
 *** TODO Can't remember the org-contrib package name, get it and update this documentation
+
 *** TODO Should the setup script be idempotent?
+
 * TODO Accessibility
+
 ** TODO Philosophy
+
 ** TODO Means
+
 ** TODO Fonts
+
 ** TODO User Experience
+
 *** TODO Hardware
+
 *** TODO Software
+
 **** TODO Operating System
+
 *** TODO EMACS
+
 *** TODO Performance
+
 *** TODO Languages
+
 * TODO Critical Next Steps
+
 - Mac key bindings
 - Appearance
 - Space Control
