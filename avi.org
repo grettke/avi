@@ -655,6 +655,9 @@ that want. Use your discretion. Assume more notes will follow.
 
 * TODO Org-Mode
 
+Installation and Configuration of Org-Mode in this heading only uses built-in
+libraries and does not use Org-Package.
+
 ** TODO Start Up
 
 There are things that must occur during start… *before* everything else.
