@@ -38,6 +38,249 @@ observation and reproducibility. Those first steps were delightful and critical
 to making sense of many aspects of the world. In any valuable endeavor, sincere
 effort and willful-determination are required no matter the outcome. Those first
 investments appear below.
+***** TODO Import of TC3F
+* How to design a file conservator (HTDFC) or The Care and Conservation of Computer Files (TC3F)
+
+#+begin_comment
+This section will never be tangled.
+#+end_comment
+
+** Audience [fn:6873a93e: http://dictionary.reference.com/cite.html?qh=audience&ia=luna]
+
+Who should be reading this?
+Possibly…
+- Entire document: Software engineers who want to do the above [fn:15b6c04f: https://en.wikipedia.org/wiki/Software_engineer]
+  - If you are using this an excuse to learn Lisp, then know that it is really,
+    really simple. Here is how it goes:
+    - 3s to download Emacs
+    - 3m to learn how to run code
+    - 3h to learn the IDE
+    - 3d to master the language
+- Decisions & Assembly: Existing Emacs users… daily usage and non-trivial customization
+  An interest in using package/el-get/cask and org-mode literate programming are the only thing that would motivate anyone to read this really.
+
+This is an unfinished and experimental document. All successes with it
+may be attributed to all of the folks who provided these wonderful tools. All
+failures with it may be attributed to me.
+
+Why should they be reading this?
+#+BEGIN_QUOTE
+The expectations of life depend upon diligence; the mechanic that would perfect
+his work must first sharpen his tools. [fn:c5de8da5: http://www.brainyquote.com/quotes/quotes/c/confucius141110.html]
+#+END_QUOTE
+
+** Cogito ergo sum [fn:bfef9921: https://en.wikipedia.org/wiki/Cogito_ergo_sum]
+
+What was I thinking?
+- creation :: "the act of producing or causing to exist" [fn:77af012a: http://dictionary.reference.com/browse/creation]
+- conservation :: "prevention of injury, decay, waste, or loss" [fn:c6f84dda: http://dictionary.reference.com/browse/Conservation]
+- computer files :: "a file maintained in computer-readable form" [fn:49968ef8: http://dictionary.reference.com/browse/computer%20file]
+
+Pursuing these goals, in the manner of literate programming, also serves to
+better myself, as captured here:
+
+#+BEGIN_QUOTE
+The expectations of life depend upon diligence; the mechanic that would perfect
+his work must first sharpen his tools. [fn:485efd70: https://www.brainyquote.com/quotes/quotes/c/confucius141110.html]
+#+END_QUOTE
+
+** Means [fn:efbd05b2: http://dictionary.reference.com/cite.html?qh=tools&ia=luna]
+
+How do most people do it?
+- File maintainer :: a person and program responsible for TC3F
+- COTS :: edit, VI, Emacs, IntelliJ Idea, Visual Studio [fn:95c9649d: https://en.wikipedia.org/wiki/Commercial_off-the-shelf]
+- Bespoke :: custom software [fn:9bd5543e: https://en.wikipedia.org/wiki/Custom_software]
+
+** Madness [fn:11: http://dictionary.reference.com/browse/madness]
+
+What about their raison detre? [fn:47c1450f: http://dictionary.reference.com/cite.html?qh=raison%20detre&ia=luna]
+- Wonderful, wonderful stock tooling, 80%
+- Can tool-makers build it perfectly for us all? [fn:13: http://www.wisdomandwonder.com/article/509/lambda-the-ultimate-goto]
+- Either way:
+#+BEGIN_QUOTE
+Thinking is required.
+#+END_QUOTE
+
+*** Goal
+
+What is my measure of success?
+#+BEGIN_CENTER
+To provide a self-supportable environment in which the creation and conservation
+of computer files may occur with ease
+#+END_CENTER
+
+** Decision
+
+#+BEGIN_QUOTE
+GNU Emacs is an extensible, customizable text editor [fn:a9219a62: https://www.gnu.org/software/emacs/]
+#+END_QUOTE
+
+** Methodology [fn:8e6c1615: http://dictionary.reference.com/cite.html?qh=method&ia=luna]
+
+How will I customize it?
+
+Agile [fn:99b4e7dd: https://en.wikipedia.org/wiki/Agile_software_development]
+- Product Backlog
+- Sprint Backlog
+- Review, Refine, and Reiterate
+- COTS libraries
+- Capture rationale and reasons along with things I did or didn't do and why
+- Includes links to everything
+
+Note: How you break up the initialization of a system like Emacs is mostly
+personal preference. Although org-mode (Babel) lets you tell a story, I was
+coming from a pretty structured configuration file to begin with. In the future, it
+might be interesting to look at this system from scratch in terms of doing
+literate programming. Fortunately, it provides that freedom out of the box.
+
+*** Medium
+
+How will explain what I did?
+- Audience-appropriate presentations
+- Reproducible research
+- Reusable data structures
+
+** Developmental Values
+
+*** Traits
+
+- [X] Pleasing user experience
+- [X] Pervasive orthogonality [fn:d104e6b8: http://dictionary.reference.com/browse/orthogonal]
+- [X] Self-supportable
+
+*** Coding
+
+- [X] Completion
+- [X] Debugging
+- [X] Templates
+
+*** Editing
+
+- [X] Auto-indenting
+- [X] Binary file editing, hex editor
+- [X] Code folding
+- [X] Code formatting
+- [X] Diffing
+- [X] Heavily used languages:
+  - [X] CSS
+  - [X] Elisp
+  - [X] HTML
+  - [X] Graphviz
+  - [X] JSON
+  - [X] JavaScript
+  - [X] Make
+  - [X] Markdown
+  - [X] R
+  - [X] Scheme
+  - [X] shell
+- [X] Lightly used languages:
+  - [X] go
+  - [X] OCaml
+  - [X] SML
+  - [X] Clojure
+  - [X] Perl
+  - [X] Python
+  - [X] Ruby
+- [X] Incremental selection
+- [X] LaTeX
+- [X] SEXP Support
+- [X] Spell-checking
+- [X] Structured navigation
+- [X] Syntax highlighting
+- [X] Tab management
+
+*** Development
+
+- [X] Build tools: make
+- [X] Copyright notice, analysis, and standards
+- [X] Dependency management
+- [X] Diagramming
+- [X] UML
+- [X] Version control: git, svn, bzr, cvs, rcs
+- [X] Workflow
+
+** Operational Values
+
+*** Fonts
+
+- [X] Focus on easily-screen-readable, mono-spaced
+- [X] Research suggests that san-serif fonts are easier to read [fn:e2c60dbb: http://thenextweb.com/dd/2011/03/02/whats-the-most-readable-font-for-the-screen/#!uCcs8] [fn:ffab7a5b: http://www.webpagecontent.com/arc_archive/182/5/] [fn:e205ad03: http://www.awaionline.com/2011/10/the-best-fonts-to-use-in-print-online-and-email/] [fn:e2364216: https://tex.stackexchange.com/questions/20149/which-font-is-the-most-comfortable-for-on-screen-viewing] [fn:22: http://river-valley.tv/minion-math-a-new-math-font-family/] [fn:8ca6ae83: http://edutechwiki.unige.ch/en/Font_readability]
+- [X] Research suggests that color doesn't matter; only contrast [fn:0faa1215: http://usabilitynews.org/the-effect-of-typeface-on-the-perception-of-email/]
+  [fn:d6fea857: http://usabilitynews.org/know-your-typefaces-semantic-differential-presentation-of-40-onscreen-typefaces/] [fn:26: http://typoface.blogspot.com/2009/08/academic-base.html] [fn:a0cb9414: http://liinwww.ira.uka.de/bibliography/Typesetting/reading.html] [fn:763d94de: http://www.kathymarks.com/archives/2006/11/best_fonts_for_the_web_1.html] [fn:4b3fa8ae: http://psychology.wichita.edu/surl/usabilitynews/52/uk_font.htm] [fn:1ad6b453: http://usabilitynews.org/a-comparison-of-popular-online-fonts-which-size-and-type-is-best/] [fn:d0e1495e: http://usabilitynews.org/a-comparison-of-popular-online-fonts-which-is-best-and-when/]
+- [X] Unicode support is critical
+
+*** Images
+
+- [X] ASCII art
+
+*** Spreadsheet
+
+- [X] Calculation
+- [X] Data management
+- [X] Import/Export
+
+*** Files
+
+- [X] Auto-save & synchronize
+- [X] Encryption
+- [X] File-system/directory management
+- [X] Project structure
+- [X] Search everywhere
+
+*** Commands
+
+- [X] Key recording
+- [X] Macros
+- [X] History of all things: files, commands, cursor locations
+- [X] Undo
+
+*** Publishing
+
+- [X] Code
+- [X] Multiple formats: HTML, JavaScript, PDF
+
+*** Terminal
+
+- [X] Cross-platform shell
+- [X] Games
+
+*** Remote file access and management
+
+- [X] SSH
+- [X] SCP
+
+*** Music
+
+- [X] LilyPond
+
+*** Communications
+
+- [X] IRC
+
+** Observations
+
+- Went stunningly well
+- Stopped logging hours spent >200h
+- This configuration was developed organically quite differently from the original idea
+- Literate programming allowed an insanely flexible and freeing experience
+- This one massive experience for me made a powerful, positive, life-changing
+  impression on me
+- My laziness and poor habits were made quite apparent going through the efforts
+  to consider, realize, and support this system
+- Before beginning I had no value system about testing this kind of artifact
+- If this attribution, which is /only/ about Wolfram's MathWorld [fn:027a87a4: http://mathworld.wolfram.com/], the you may be interested in this style of programming and literature:
+#+begin_quote
+Created, developed, and nurtured by Eric Weisstein at Wolfram Research
+#+end_quote
+
+** La trahison des images [fn:2bb0a70b: https://en.wikipedia.org/wiki/The_Treachery_of_Images]
+
+Where else has this acronym shown up?
+- #cc33ff :: bright purple color [fn:9b8e5e86: http://www.color-hex.com/color/cc33ff]
+- Commander, U.S. Third Fleet :: WWII navy [fn:2e96ef97: https://secure.flickr.com/people/c3f/]
+- A spasmogenic fragment :: a peptide [fn:07d2fa50: http://books.google.com/books?id=L4CI-qkhuQ8C]
+
+
 **** TODO Unique Purusha
 **** TODO Universal Purursha
 *** TODO First Express Values, Then Define Means
