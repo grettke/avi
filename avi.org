@@ -2185,14 +2185,6 @@ provide information about them. This holds true to her file-based worldview.
 
 ** TODO Font
 
-# -- Latex template
-#+DATE: <2014-02-24 MON>
-#+OPTIONS: texht:t
-#+LATEX_CLASS: article
-#+LATEX_CLASS_OPTIONS: [letterpaper, 10pt]
-#+LATEX_HEADER: \usepackage[paperwidth=8.5in, paperheight=11in, hmargin=0.5in, vmargin=0.5in]{geometry}
-#+LATEX_HEADER_EXTRA:
-
 *** Introduction
 
 Choosing my font for ALEC has been a journey. Gosh, that is a very serious word.
