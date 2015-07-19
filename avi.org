@@ -471,6 +471,72 @@ a flawless, rational, and logical human being to:
 
 **** TODO Universal Purursha
 
+My journey with ALEC left me more exhausted an inspired. Shocking, I would have
+never guessed that it would end that way. What was the nature of the deficit?
+Was it in the tools?
+
+EMACS is an source of infinite wonder. It is the child of 1000 smiles. It runs on
+silicon that was poured with the magic of 1000 jokes. The tools are delightful.
+Was it the community?
+
+The EMACS community is a source of constant inspiration. They are the true
+embodiment of sacrifice. Sacrifice is the ultimate form of love. It is service
+without any expectation. It is the highest act that a human can perform. It is
+still happening by the second. Watch the MELPA [fn:451b35b3: http://melpa.org/#/]
+update feed. Constant. Look at all of the custom configurations of EMACS.
+
+EMACS itself is a superb configuration of EMACS. Spacemacs [fn:10d1bb5e: https://github.com/syl20bnr/spacemacs]
+perfect is you know VIM [fn:0213eea3: http://www.vim.org/]. Batsov's Prelude [fn:efcff1fe: http://batsov.com/prelude/],
+Schulte's Starter Kit [fn:dd6d6239: https://github.com/eschulte/emacs24-starter-kit],
+and Purcell's Reasonable [fn:af652630: https://github.com/purcell/emacs.d] are
+just a few more of the planets that revolve around our expressive EMACS centered
+universe. The community gives and gives. The tool is GPL'd [fn:aa0e7c1a: https://www.gnu.org/licenses/gpl-3.0.en.html];
+it will continue to give and give. That leaves the operator, me.
+
+***** TODO Expansion
+
+Part of the journey can be confusing. The best action when confusion arises is
+to create space for the answer to appear. Meditation is one fine approach. Also
+service, exercise, and fellowship. That sheds light on the confusion, and it
+dries up pretty quickly. What remains are the truths. Those truths are touched
+upon with every step. They often result in smiles or laughs. For me the answer
+had to do with the source of creativity.
+
+The Unique Purusha has elements of the Universal Purusha. They fel the same.
+Great things come about from them. Something happens though, a sense of
+inability to maintain that effort comes. One person can't do it alone. Even
+when connected with an infinite community and tool surrounding EMACS, the small
+Purusha is finite and limited. Eventually she reaches her ends. The deficit is
+real, but it is not in the community, the tool, Purusha, or even the operator.
+
+***** TODO Unification
+
+The deficit is in the fragile and partial connection to infinity, the Universal
+Purusha. It results in a sense of exhaustion and incompleteness and
+impossibility. It clouds your visibility and acts an impediment to doing the
+one true and good thing.
+
+When you become part of infinity again, you find that there are infinite
+possibilities. Unlimited, you may pursue all of them. Suddenly, that which you
+pursue involves neither loss nor gain. At that moment when you touch infinity,
+you have access to all of them. Suddenly, the right thing becomes the most
+important thing. What is right (and wrong) when faced with infinity? Therein
+lies the mystery waiting to be revealed. At that moment we are freed from the
+burden of making limited decisions based upon time, space, causality, and
+identity, and there is more. We are able to act without the burden of of what
+the individual "I" desires and instead act with the surety of the universal "I"
+that is the essence of "pure reason". The "I" continues to exist, in all of its
+beauty, and continues to operate, united again, with the whole. It can be
+paradoxical to state such things, though it makes total and completely
+satisfying sense. Gaining access to the source of "pure reason" and acting on
+Prakriti's behalf gives one sense of total complete satisfaction and direction
+with absolute, complete, and total surety. My fears that I would become a robot
+were fears of my mind, surely afraid of losing domain over its little kingdom.
+Now I want that it is learning about its absolute, true, and best, best friend,
+that friend that is inside all of us and without limit.
+
+With that confidence I will move forward in a simple and detailed manner.
+
 *** TODO First Express Values, Then Define Means
 
 *** TODO Universal
@@ -647,3 +713,5 @@ Start EMACS normally.
 - Space Control
 - Print out ALEC, cross-out migration
 - Need Magit ASAP
+
+#  LocalWords:  Schulte's Purcell's GPL'd TODO Prakriti's
