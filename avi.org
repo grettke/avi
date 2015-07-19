@@ -3052,8 +3052,7 @@ Use-Package will manage all of the package installations.
 At this point the rest of the system is ready to use packages in whatever order
 makes sense.
 
-** Packages
-*** Alert
+* Alert
 
 Used on graphics systems for pretty notifications. It is helpful.
 
