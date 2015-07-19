@@ -38,7 +38,6 @@ observation and reproducibility. Those first steps were delightful and critical
 to making sense of many aspects of the world. In any valuable endeavor, sincere
 effort and willful-determination are required no matter the outcome. Those first
 investments appear below.
-***** TODO Import of TC3F
 ***** How to design a file conservator (HTDFC) or The Care and Conservation of Computer Files (TC3F)
 
 #+begin_comment
