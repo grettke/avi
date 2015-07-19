@@ -2183,6 +2183,9 @@ provide information about them. This holds true to her file-based worldview.
 
 1) Choose "quiet" tones that minimize eye strain
 
+** TODO Insert and manage Fonts2.org
+
+
 * TODO Accessibility
 
 ** TODO Philosophy
