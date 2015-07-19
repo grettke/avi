@@ -903,7 +903,7 @@ because there is still no custom stylesheet.
 Building =org= documents is intimately tied to the =org= version, so verify it is
 what we expect.
 #+begin_src emacs-lisp
-(defconst gcr/org-version "8.2.10")
+(defconst gcr/org-version "8.3beta")
 
 (defun gcr/warn-org-version ()
   "Warn of org misconfiguration."
