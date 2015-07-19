@@ -1,5 +1,6 @@
 * TODO AVI
 ** TODO Philosophy
+** TODO Representation of Decisions as Text in Storage
 ** TODO Org-Mode
 ** TODO Style Guide
 *** TODO Names
@@ -24,3 +25,14 @@
 ***** TODO Explain when to use one vs other
 * TODO Org-Mode
 ** TODO Installation
+* TODO Accessibility
+** TODO Philosophy
+** TODO Means
+** TODO Fonts
+** TODO User Experience
+*** TODO Hardware
+*** TODO Software
+**** TODO Operating System
+*** TODO EMACS
+*** TODO Performance
+*** TODO Languages
