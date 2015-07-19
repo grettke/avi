@@ -715,7 +715,6 @@ Start EMACS normally.
 - Mac key bindings
 - Appearance
 - Space Control
-- Print out ALEC, cross-out migration
 - Need Magit ASAP
 
 #  LocalWords:  Schulte's Purcell's GPL'd TODO Prakriti's
