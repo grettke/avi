@@ -15,6 +15,19 @@ It has occurred in three stages:
 2) Absorbed by the Expression of Creativity (Unique Purusha [fn:7b0aa25c: https://en.wikipedia.org/wiki/Purusha])
 3) Unification With Infinite Inspiration (Universal Purusha)
 **** TODO Sankalpa
+When you hear the timeless whisper of Sankalpa, the inner-most chamber of your
+heart will hear it. Your heart will also heighten your attention to that whisper
+of love. Both will stay with you in the form of an infinite ember that is yours
+to fan and flame. My whisper came simply in the form of trying to "do a good job
+at what I do".
+
+By trade I am a Software Developer [fn:6e6bfa2b: https://en.wikipedia.org/wiki/Software_developer].
+The trade is in its infancy. In many years it will be recognized among all of
+the other great trades of mankind. We don't have many tools. We try to choose
+the best. EMACS [fn:a18521af: https://www.gnu.org/software/emacs/emacs.html] is
+the best and I chose it. Then I set out the hone my expertise of that tool in
+the form of an ideal configuration. The next section is my first thoughtful
+configuration.
 **** TODO Unique Purusha
 **** TODO Universal Purursha
 *** TODO First Express Values, Then Define Means
