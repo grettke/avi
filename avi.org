@@ -654,10 +654,7 @@ that want. Use your discretion. Assume more notes will follow.
 ***** TODO Explain when to use one vs other
 
 * TODO Org-Mode
-* Start Up
-  :PROPERTIES:
-  :noweb-ref: Start-Up
-  :END:
+** TODO Start Up
 
 There are things that must occur during start… *before* everything else.
 
