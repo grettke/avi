@@ -3079,7 +3079,6 @@ on the other hand, is, and also lives on Github meaning that it is maintainable.
              )
 #+end_src
 
-* TODO Helper Functions Post-Provisioning
 * TODO Org-Mode Post-Provisioning
 
 Load the =ob-sml= package. Perhaps some day it will end up in the mainline.
