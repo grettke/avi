@@ -3074,13 +3074,4 @@ Load the =ob-sml= package. Perhaps some day it will end up in the mainline.
 # (org-ac/config-default)
 # #+end_src
 
-# Load the =ob-sml= package. Perhaps some day it will end up in the mainline.
-
-# #+begin_src emacs-lisp
-# (require 'ob-sml nil 'noerror)
-# #+end_src
-
-# Add to allowed languages
-#    (sml . t)
-
 #  LocalWords:  Schulte's Purcell's GPL'd TODO Prakriti's
