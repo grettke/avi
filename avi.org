@@ -1,14 +1,41 @@
 * TODO AVI
-** TODO Philosophy
-** TODO Representation of Decisions as Text in Storage
+** TODO Philosophy 
+*** TODO Universal
+*** TODO Theory of Opposites
+*** TODO Representation of Decisions as Text in Storage
+*** TODO Time Space Causality Identity (TSCI)
 ** TODO Org-Mode
+*** TODO Should TSCI be Maintained in This Document?
+Humans like to see things in order. With Noweb-Ref we can structure and tangle in any order
+that want. Use your discretion. Assume more notes will follow.
 ** TODO Style Guide
+*** TODO Headings
+- Completed headings
+  - Transitioned out from =DONE=
+  - Don't end with punctuation
+- Incomplete headings
+  - Do whatever you want, they are not final
+- Not sure whether or not to include references in headings
+- Patch was recently added to do so
+*** TODO List
+- Single sentence items end with a period
 *** TODO Names
-**** TODO Packages
+**** TODO Package
   - Referenced in written-language
     - Reading font
     - Capitalize whole words
     - Separate spaces with a single dash
+**** TODO Code
+- Monospaced markup in-line and source-blocks
+**** TODO Features
+- Can be express either as a [[Package]] or [[Code]]
+*** TODO Source Blocks
+- Tell the story
+- Punctuate normally
+- After periods where a new paragraph would appear is a natural place for a source block
+  that expresses that which was just communicated
+  - Indent like any paragraph, with an empty line separating them
+- Only use a =:= when a list of blocks follows in the same way that you would format a list of text
 *** TODO Hyperlinks
 **** TODO Internal Links
 - If the resource is contained within this document then it is an internal link.
