@@ -553,6 +553,9 @@ service.
 
 ** TODO Org-Mode
 
+Org-Mode and EMACS create an environment where AVI may be expressed. They are
+critical to each other and to the operator.
+
 *** TODO Should TSCI be Maintained in This Document?
 
 Humans like to see things in order. With Noweb-Ref we can structure and tangle in any order
