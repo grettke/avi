@@ -757,7 +757,19 @@ This is a copy and paste. Additional languages would warrant a refactor."
   "Report use-package misconfiguration."
   (interactive)
   (unless (package-installed-p 'use-package)
-    (warn "Please install 'use-package by hand. To do so, restart EMACS with `-Q' then run `list-packages', choose it and install it, and finally restart EMACS.")))
+    (warn "Please install 'use-package by hand. To do so, run `list-packages', search for it, position the cursor on it, and install it by typing `i', `x', 'yes', and finally restart EMACS.")))
 (gcr/warn-use-package)
+(require 'use-package)
 
 ;; Package\ &\ Use-Package:1 ends here
+
+;; [[file:~/src/avi/avi.org::*Org-Mode%20Post-Provisioning][Org-Mode\ Post-Provisioning:1]]
+
+(use-package ob-sml
+             :ensure t
+             :config
+             (require 'ob-sml nil 'noerror)
+             (add-to-list 'org-babel-load-languages
+                          '(sml . t)))
+
+;; Org-Mode\ Post-Provisioning:1 ends here

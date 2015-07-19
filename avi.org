@@ -3013,6 +3013,20 @@ Use-Package will manage all of the package installations.
   (unless (package-installed-p 'use-package)
     (warn "Please install 'use-package by hand. To do so, run `list-packages', search for it, position the cursor on it, and install it by typing `i', `x', 'yes', and finally restart EMACS.")))
 (gcr/warn-use-package)
+(require 'use-package)
+#+end_src
+
+* TODO Org-Mode Post-Provisioning
+
+Load the =ob-sml= package. Perhaps some day it will end up in the mainline.
+
+#+begin_src emacs-lisp
+(use-package ob-sml
+             :ensure t
+             :config
+             (require 'ob-sml nil 'noerror)
+             (add-to-list 'org-babel-load-languages
+                          '(sml . t)))
 #+end_src
 
 * TODO Accessibility
