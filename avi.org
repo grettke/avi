@@ -63,3 +63,8 @@ that want. Use your discretion. Assume more notes will follow.
 *** TODO EMACS
 *** TODO Performance
 *** TODO Languages
+* TODO Critical Next Steps
+- Mac key bindings
+- Appearance
+- Space Control
+- Print out ALEC, cross-out migration
