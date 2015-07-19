@@ -45,6 +45,7 @@ that want. Use your discretion. Assume more notes will follow.
   - Link to that ID
 ***** TODO Document how to create random link IDs in the parent
 ***** TODO Add reference to http://orgmode.org/manual/Internal-links.html#Internal-links
+***** TODO Add startup set to pull latest? Pros and cons of each.
 **** TODO External Links
 - If the resource is not contained within this document then it is an external link.
 ***** TODO Add reference to http://orgmode.org/manual/External-links.html#External-links
