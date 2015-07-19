@@ -312,6 +312,8 @@ that want. Use your discretion. Assume more notes will follow.
     - Reading font
     - Capitalize whole words
     - Separate spaces with a single dash
+  - Acronyms remain all upper case to distinguish from words for example "GNU"
+    vs "Gnu".
 **** TODO Code
 - Monospaced markup in-line and source-blocks
 **** TODO Features
