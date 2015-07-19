@@ -977,12 +977,6 @@ turning to DONE.
 (setq org-enforce-todo-dependencies +1)
 #+end_src
 
-Allow the mouse to do =org= things like expand and collapse headings.
-#+begin_src emacs-lisp
-(gcr/on-gui
- (require 'org-mouse))
-#+end_src
-
 Use a real ellipsis to render an ellipsis for =org= stuff like showing that a
 header is collapsed.
 #+begin_src emacs-lisp
@@ -1016,16 +1010,6 @@ they are special, and specifically /not/-Unicode. Do the same thing for LaTeX
 and related markup.
 #+begin_src emacs-lisp
 (setq org-highlight-latex-and-related '(latex script entities))
-#+end_src
-
-There is an auto-complete provider for org-mode [fn:a94049d3: https://github.com/aki2o/org-ac]. Nice as I didn't even
-think to check. Perhaps a check should go on the standard setup list. This seems
-to work when you type out things like block definitions; and it won't apply
-to EasyTemplate generated regions. =auto-complete= will still work on them,
-though:
-#+begin_src emacs-lisp
-(require 'org-ac)
-(org-ac/config-default)
 #+end_src
 
 Footnote management is an important topic. Thanks to Richard [fn:44cb98d6: https://lists.gnu.org/archive/html/emacs-orgmode/2014-04/msg00172.html], there
@@ -1144,19 +1128,6 @@ known good state.
   (gcr/save-all-file-buffers))
 #+end_src
 
-=org-show= need special handling, see the install for details.
-#+begin_src emacs-lisp
-(let ((pkg 'org-show))
-  (gcr/on-gui
-   (if (not (el-get-package-is-installed pkg))
-       (warn "You wanted %S to be installed, but it isnt. Fix this." pkg)
-     (let ((fil (concat (el-get-package-directory pkg) "org-show.el")))
-       (if (not (f-exists? fil))
-           (warn "You wanted %S to exist, but it doesn't. Fix this." fil)
-         (load fil)))))
-  (gcr/not-on-gui (warn "You wanted %S to be loaded, but it won't be… it doesn't work without a GUI for some reason." pkg)))
-#+end_src
-
 **** Babel
 
 There is a hook for things to do after a source block has been executed. This
@@ -1175,12 +1146,6 @@ the correct approach as of <2015-01-22 Thu>, which meant a simpler function call
   (org-redisplay-inline-images))
 
 (add-hook 'org-babel-after-execute-hook 'gcr/org-babel-after-execute-hook)
-#+end_src
-
-Load the =ob-sml= package. Perhaps some day it will end up in the mainline.
-
-#+begin_src emacs-lisp
-(require 'ob-sml nil 'noerror)
 #+end_src
 
 Tell =org= that it may evaluate all of the listed languages.
@@ -1203,7 +1168,6 @@ Tell =org= that it may evaluate all of the listed languages.
    (R . t)
    (scheme . t)
    (sh . t)
-   (sml . t)
    (sql . t)))
 #+end_src
 
@@ -1521,21 +1485,52 @@ in use here.
 ***** Core Babel Configuration
 
 There is a performance issue with tangling when header property inheritance is
-enabled. Eric explained that [fn:419e4704: https://lists.gnu.org/archive/html/emacs-orgmode/2014-06/msg00719.html] there may be performance gains if some
-of the header properties are not considered. The list below defines what will
-be allowed, and everything else will be removed. With only six properties you
-sure can do a *lot*.
+enabled. Eric explained that [fn:419e4704: https://lists.gnu.org/archive/html/emacs-orgmode/2014-06/msg00719.html]
+there may be performance gains if some of the header properties are not
+considered. The list below defines what will be allowed, and everything else
+will be removed. With only six properties you sure can do a *lot*. This did help.
+When I migrated to AVI tangling got faster. Then I decided that it wasn't worth
+any bit of sacrifice of expressivity in Org-Mode so I quit disabling *any* header
+properties.
+
+Utility functions follow.
+
 #+begin_src emacs-lisp
-(let* ((allowed '(exports
-                  file
-                  noweb
-                  noweb-ref
-                  session
-                  tangle))
-       (new-ls
-        (--filter (member (car it) allowed)
-                  org-babel-common-header-args-w-values)))
-  (setq org-babel-common-header-args-w-values new-ls))
+(defun gcr/set-org-babel-default-header-args (property value)
+  "Easily set system header arguments in org mode.
+
+PROPERTY is the system-wide value that you would like to modify.
+
+VALUE is the new value you wish to store.
+
+Attribution: URL `http://orgmode.org/manual/System_002dwide-header-arguments.html#System_002dwide-header-arguments'"
+  (setq org-babel-default-header-args
+        (cons (cons property value)
+              (assq-delete-all property org-babel-default-header-args))))
+
+(defun gcr/set-org-babel-default-inline-header-args (property value)
+  "See `gcr/set-org-babel-default-header-args'; same but for inline header args."
+  (setq org-babel-default-inline-header-args
+        (cons (cons property value)
+              (assq-delete-all property org-babel-default-inline-header-args))))
+
+(defun gcr/set-org-babel-default-header-args:R (property value)
+  "See `gcr/set-org-babel-default-header-args'; same but for R.
+
+This is a copy and paste. Additional languages would warrant a refactor."
+  (setq org-babel-default-header-args:R
+        (cons (cons property value)
+              (assq-delete-all property org-babel-default-header-args:R))))
+
+(defun gcr/ispell-org-header-lines-regexp (h)
+  "Help ispell ignore org header lines."
+  (interactive)
+  (cons (concat "^#\\+" h ":") ".$"))
+
+(defun gcr/ispell-a2isra (block-def)
+  "Add to the ispell skip region alist the BLOCK-DEF."
+  (interactive)
+  (add-to-list 'ispell-skip-region-alist block-def))
 #+end_src
 
 ****** Comments [fn:1e1a7e1f: http://orgmode.org/manual/comments.html#comments]
@@ -2093,8 +2088,8 @@ they are usually abbreviations or other non-words:
 Most of the default org export properties should be ignored because they are not
 words and I may ispell them manually when desired:
 #+begin_src emacs-lisp
-(let (void)
-  (--each
+(mapc (lambda (it)
+        (gcr/ispell-a2isra (gcr/ispell-org-header-lines-regexp it)))
       '("ATTR_LATEX"
         "AUTHOR"
         "CREATOR"
@@ -2119,8 +2114,7 @@ words and I may ispell them manually when desired:
         "OPTIONS"
         "SELECT_TAGS"
         "STARTUP"
-        "TITLE")
-    (gcr/ispell-a2isra (gcr/ispell-org-header-lines-regexp it))))
+        "TITLE"))
 #+end_src
 
 **** Hooks
@@ -2976,6 +2970,48 @@ that point, everything worked _perfectly_. I tested it 5 times. I look forward t
 seeing how it works out in the future. It is certainly consistent with what
 Purcell shared.
 
+** Package & Use-Package
+
+Package management involves downloading packages from the Internet to
+install them. It occurs in this system using Package and Use-Package.
+
+Before doing any work with Package it must be initialized. Failure to do so is
+the easiest way to waste time and achieve nothing.
+
+#+begin_src emacs-lisp
+(package-initialize)
+#+end_src
+
+MELPA is critical.
+
+#+begin_src emacs-lisp
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
+#+end_src
+
+GNU stuff is always good.
+
+#+begin_src emacs-lisp
+(add-to-list 'package-archives
+             '("gnu" . "http://elpa.gnu.org/packages/"))
+#+end_src
+
+Hours have been wasted trying locate and create a good reusable approach for
+installing packages before system load. Package+ was a decent approach but still
+wasn't right for me.
+
+Use-Package needs to be installed manually. Install it by hand. After that,
+Use-Package will manage all of the package installations.
+
+#+begin_src emacs-lisp
+(defun gcr/warn-use-package ()
+  "Report use-package misconfiguration."
+  (interactive)
+  (unless (package-installed-p 'use-package)
+    (warn "Please install 'use-package by hand. To do so, run `list-packages', search for it, position the cursor on it, and install it by typing `i', `x', 'yes', and finally restart EMACS.")))
+(gcr/warn-use-package)
+#+end_src
+
 * TODO Accessibility
 
 ** TODO Philosophy
@@ -3004,5 +3040,30 @@ Purcell shared.
 - Appearance
 - Space Control
 - Need Magit ASAP
+
+# Allow the mouse to do =org= things like expand and collapse headings.
+# #+begin_src emacs-lisp
+# (gcr/on-gui
+#  (require 'org-mouse))
+# #+end_src
+
+# There is an auto-complete provider for org-mode [fn:a94049d3: https://github.com/aki2o/org-ac]. Nice as I didn't even
+# think to check. Perhaps a check should go on the standard setup list. This seems
+# to work when you type out things like block definitions; and it won't apply
+# to EasyTemplate generated regions. =auto-complete= will still work on them,
+# though:
+# #+begin_src emacs-lisp
+# (require 'org-ac)
+# (org-ac/config-default)
+# #+end_src
+
+# Load the =ob-sml= package. Perhaps some day it will end up in the mainline.
+
+# #+begin_src emacs-lisp
+# (require 'ob-sml nil 'noerror)
+# #+end_src
+
+# Add to allowed languages
+#    (sml . t)
 
 #  LocalWords:  Schulte's Purcell's GPL'd TODO Prakriti's
