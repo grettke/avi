@@ -702,11 +702,7 @@ Start EMACS normally.
 
 *** TODO Should the setup script be idempotent?
 
-** TODO Configuration
-
-This document tangles itself. Org-Mode's configuration needs to come early.
-
-** Org
+** Configuration
 
 There are 3 ways to install Org [fn:6edaf224: http://orgmode.org/manual/Installation.html]:
 - ELPA
