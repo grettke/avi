@@ -2167,7 +2167,6 @@ easy to exit. This is consistent with the approach of "same to exit as enter".
 (add-hook 'org-src-mode-hook 'gcr/org-src-mode-hook)
 #+end_src
 
-
 * TODO Accessibility
 
 ** TODO Philosophy
