@@ -287,6 +287,176 @@ Where else has this acronym shown up?
 
 ***** TODO Import All Of Alec
 
+* Ends & Means
+
+There are so many ways to customize a system. Is intent or pragmatics more
+important? In my philosophy, the nature of the /end/ is contained within the
+properties of the /means/ themselves. They are inseparable. The traits are
+the fundamental aspects of this system. They are things that are critical, they
+are *everything*. Here my goal is to capture both the means and the ends.
+
+These are the minimum fundamental features to allow for the fluid delivery and
+execution of the creative experience within this medium.
+
+The capture occurs sequentially. The ends are listed first though, because they
+are much more meaningful and inspiring to me than the means, at least in "listed
+here form". Their execution, of course, is much more visceral and fun!
+
+The means used to be broken up into highly categorical sections. It made sense,
+but it didn't read well. It might make sense from a reference perspective, but
+that was about it. This document focuses more on the flow. Since the fundamental
+means /ought/ to be concise, they are intended to be read at a single sitting.
+
+* Ends (ALEC)
+
+This system has changed who I am and how I think. Because it is easier to focus
+on the tools rather than the intent, on the means versus the ends, I focus on this
+system, this configuration of Emacs. My system is a provider, a realization, of
+a language for expressing creativity. 𝔸𝕃𝔼ℂ. ALEC's a Language for Expressing
+Creativity. That is a truly and utterly beautiful thing to ponder.
+
+The expression of creativity is why we are born human. Five of our senses go out
+into the world searching, always searching. In our time-space, the expressions
+that may be consumed by the eye (paintings, graphic arts) and consumed by the
+ear (music) are so, so lovely, and easy for us to understand (How do you address
+someone whose /true/ name is Symphony?). We are here to let that voice sing, and
+we want all five senses to help do it, for the maximization of expressivity.
+
+The song, that sweet celestial song, is sometimes more difficult for people to
+hear. The honey-kissed embrace of one's love feels different than a song, and
+different than laughing at a joke, but they are all the creative act. Gardening,
+selling, collecting, tending… they are all part of the creative act that makes
+us again be born human. We always seem to focus on the configuration of those
+actions (time, space, causality, and identity), the build of those tools,
+necessary to perform the creative act. With time and patience, we will know the
+true nature of things. Part of the path is indeed attaining mastery. Mastery
+over ourselves, mostly, by some way that is gentle and kind. That action, that
+attempt, for me, has partially culminated in the aggregation of a lifetime of
+mastery of tools and programming languages and ideas and studies and training
+and collaboration and mystery and magic and laughing, in this birth, in the
+artifact called ALEC, and ALEC can only be expressed, for me, for now, with
+Emacs.
+
+This system is no longer "Emacs". It is not its disparate packages. They are
+tools, yes, and more importantly, they are expressions of creativity. Together
+in Emacs, in ALEC, they are composed, like parts of a symphony, together, to
+allow for the ultimate in the act of creative expression. The tools themselves
+possess these traits, both in their implementation and their intent. That is
+traditional, in that, the properties and traits expressed by these "words",
+these compositional units, have the properties and traits of the things
+expressed by these "words". "Words" is the  most expressive element that I can
+think of right now, for things that can be atoms, and yet be combined to form
+sentences, something larger and more expressive, in a particular language,
+which itself can quite magically express ideas, about itself, or about anything
+else in existence.
+
+It is like watching a beautiful lotus blooming, spreading its pedals, having
+been nourished by the fertile soil, protected in its pond, knowing that it must
+strive to reach higher, nurtured by Mother Sun. The very act, the ultimate act
+of creative expression, that very action contains itself and is culminated by
+itself. It is that which it is trying to achieve, and to be that, is to do that,
+for itself and for all of creation. This ultimate act of creative expression, is
+present in the manifestation of Emacs and the packages and the users who come
+together to form a perfect symphony of creative expression in a form that
+may be captured and represented as a computer file, so humble and modest, just
+like a small seed of a proud and mighty Redwood tree that will eventually reach
+hundreds and hundreds of feet into the sky and towards Mother Sun, contains
+that which it will become in it's own existence, so too does it contain its own
+beautiful destiny in the seeds of beauty and creative expression that are
+produced with ALEC (in every form, not just the one described by this document
+of course!).
+
+The blossoming of the expression of the computational act, and the petals that
+opened in the form of the Turing's machine, Church's Lambda calculus, and
+Post's Tag System, are beautiful, and still, are only petals, that
+carry the sweet fragrance, because a fragrance is part of a moment, which is
+finite, as is every configuration of this reality. The beauty is still as sweet.
+The key is seeing the inherent beauty, the source without start and without end,
+and then being able to see that in everyone and everything.
+
+That thing, which was present before the expression of creativity, and will
+exist after it, which is not subject to the laws of time, space, causality, and
+identity, is the point that everyone surely wishes to re-visit. That quest,
+/the/ great motivator of the most softly spoken and heartfelt desire, itself is
+surely yet another expression of /that which is gentle and kind/. The steps taken
+on that quest, despite being driven by that perfect intent, are /still/ subject to
+the four boundaries of this reality. Those actions, defined by configurations,
+like the petals of the lotus, retaining its sweet fragrance, can, will, and must
+fade, but, we will shine on in the sweet embrace of Mother Sun, knowing that
+loving and warm embrace of sweet perfection, in our one, and true, home.
+
+** The desire
+
+"I want". If only all conversations would start out with a clear goal in mind.
+All too often we waste our own, and other people's time talking and simply
+trying to figure out what it is what we want. For most of us, "it", is that
+thing that will solve all of our problems in life and make us happy. Technology
+is no exception.
+
+The perfect integrated development environment is a topic of constant
+conversation. For good reason, for most of us it is our only tool. Unlike
+carpenters and wood-workers who have a bevy of interesting and delightful tools,
+we are stuck with but one. Fortunately for us, our singular tool allows
+limitless creation, of tools and more. Alan Kay said it so well [fn:2e3b75ad: https://www.cs.indiana.edu/~rpjames/]:
+
+#+BEGIN_QUOTE
+The computer is a medium that can dynamically simulate the details of any other
+medium, including media that cannot exist physically. It is not a tool, although
+it can act like many tools. The computer is the first metamedium, and as such it
+has degrees of freedom for representation and expression never before
+encountered and as yet barely investigated. The protean nature of the computer
+is such that it can act like a machine or like a language to be shaped and
+exploited.
+#+END_QUOTE
+
+Even more succinctly, my measure of success is to:
+
+#+BEGIN_CENTER
+To provide a self-suportable environment in which the creation and conservation
+of computer files may occur with ease
+#+END_CENTER
+
+As of writing, although there are many nice options out there, none of them
+come within even light-years, of power that you are granted for working with a
+computer as that metamedium, that GNU Emacs [fn:54b16b1c: https://www.gnu.org/software/emacs/]. With that in mind,
+the following is what I actually want to do with it.
+
+** The story
+
+The creativity that you apply and capture to assemble your system… this is where
+all of the fun stuff is. Let me elaborate, everything in your artifacts are
+valuable because they tell the story. Actually, they tell the story about a
+story, a story that has yet to occur and also a story that has previously
+occurred. It is here, where the actions lives, that all of those things are
+learned, practiced, suffered accordingly from, and reveled in! In other words,
+it is yet another story, a fun one.
+
+If you haven't noticed by now, either by hearing rumors, reading accounts, or
+learning of it yourself: human beings are story-oriented. Your ability to
+successfully function in and contribute to society will be directly proportional
+to your ability to listen to stories, tell others' stories, live your life such
+that you have new stories to tell, and capture them in some form of persistent
+storage. Stories grant us the power to learn from others wisdom that was
+painfully acquired thousands of years ago, and it gives you a chance to
+contribute the results of your hard work, for the future of humanity, too. A
+belief system about the value of story-telling is essential, critical, and
+mandatory to successfully achieve your goals with literate programming.
+
+As I change, the story will change, and the action will change. The cycle will
+never end.
+
+Nevertheless, I will attempt to do my best here with the good part of me being
+a flawless, rational, and logical human being to:
+
+- Deliver a supportable system
+- Deliver an adaptable system
+- Deliver an expandable system
+
+** Inspirations
+
+- Eric Weisstein :: Creator of MathWorld [fn:f0123b05: http://mathworld.wolfram.com/about/author.html]
+
+
 **** TODO Universal Purursha
 
 *** TODO First Express Values, Then Define Means
@@ -328,7 +498,7 @@ that want. Use your discretion. Assume more notes will follow.
   the next heading. Org-Mode expects this formatting. Headings will collapse and
   expand as you expect.
 - Capitalize every word
-  
+
 *** TODO List
 
 - Single sentence items end with a period
