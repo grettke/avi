@@ -2167,6 +2167,18 @@ easy to exit. This is consistent with the approach of "same to exit as enter".
 (add-hook 'org-src-mode-hook 'gcr/org-src-mode-hook)
 #+end_src
 
+* TODO User Experience
+
+AVI provides complete and total distraction free operation. Information is fine
+as long as it has to do with files. AVI is only going to work with files and
+provide information about them. This holds true to her file-based worldview.
+
+** Communications  & Media
+
+1) IRC will be in another application
+2) Email will be in another application
+3) Playing music will be in another application
+
 * TODO Accessibility
 
 ** TODO Philosophy
