@@ -327,7 +327,8 @@ that want. Use your discretion. Assume more notes will follow.
 - Keep a single empty line before the start of the body of a heading and before
   the next heading. Org-Mode expects this formatting. Headings will collapse and
   expand as you expect.
-
+- Capitalize every word
+  
 *** TODO List
 
 - Single sentence items end with a period
