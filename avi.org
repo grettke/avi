@@ -77,3 +77,4 @@ that want. Use your discretion. Assume more notes will follow.
 - Appearance
 - Space Control
 - Print out ALEC, cross-out migration
+- Need Magit ASAP
