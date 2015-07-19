@@ -1,0 +1,26 @@
+* TODO AVI
+** TODO Philosophy
+** TODO Org-Mode
+** TODO Style Guide
+*** TODO Names
+**** TODO Packages
+  - Referenced in written-language
+    - Reading font
+    - Capitalize whole words
+    - Separate spaces with a single dash
+*** TODO Hyperlinks
+**** TODO Internal Links
+- If the resource is contained within this document then it is an internal link.
+- For a resource only linked once use a "text search" link
+- For a resource linked 2 or more times
+  - Give an ID to the target
+  - Link to that ID
+***** TODO Document how to create random link IDs in the parent
+***** TODO Add reference to http://orgmode.org/manual/Internal-links.html#Internal-links
+**** TODO External Links
+- If the resource is not contained within this document then it is an external link.
+***** TODO Add reference to http://orgmode.org/manual/External-links.html#External-links
+***** TODO Add reference to http://orgmode.org/manual/Footnotes.html
+***** TODO Explain when to use one vs other
+* TODO Org-Mode
+** TODO Installation
