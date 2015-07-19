@@ -3049,6 +3049,9 @@ Use-Package will manage all of the package installations.
 (require 'use-package)
 #+end_src
 
+At this point the rest of the system is ready to use packages in whatever order
+makes sense.
+
 ** Packages
 *** Alert
 
