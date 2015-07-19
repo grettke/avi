@@ -2182,10 +2182,10 @@ provide information about them. This holds true to her file-based worldview.
 ** Colors
 
 1) Choose "quiet" tones that minimize eye strain
-
+   
 ** TODO Font
 
-*** Introduction
+*** TODO Introduction
 
 Choosing my font for ALEC has been a journey. Gosh, that is a very serious word.
 It has been a /learning experience/. I never questioned font choice before. Font
@@ -2193,7 +2193,7 @@ design is an art form. Font choice is an art form, too. I learned something.
 
 The purpose of this document is to capture parts of that journey that I valued.
 
-*** Audience
+*** TODO Audience
 
 - Computer
   - Users
@@ -2218,7 +2218,7 @@ the best for me. Hopefully the notes alone are revealing and help you reach your
 own conclusion, too. At the very least you ought to be educated, informed, and
 probably surprised, too, about some of the factors involved in font selection.
 
-*** Resources
+*** TODO Resources
 
 I started researching fonts using Internet search engines. I found a bunch of
 resources. I read all of them and took notes. This heading captures addresses to
@@ -2447,7 +2447,7 @@ correspondence. Perhaps that is just fine? If it is kind sorta not super perfect
 on-screen, perhaps that is OK, because the printed, viewable, touchable, and
 smellable form will always be the most delightful.
 
-*** Questions & Answers
+*** TODO Questions & Answers
 
 The questions are simple.
 
@@ -2482,9 +2482,9 @@ once you understand your audience and your medium. That is when the fun starts
 skyrocketing. There is so much creativity in entire process. It is really all
 quite delightful.
 
-*** Goals & Medium
+*** TODO Goals & Medium
 
-**** Literate Programming on a Computer
+**** TODO Literate Programming on a Computer
 
 - Research
   - Emacs is the primary environment
@@ -2535,7 +2535,7 @@ quite delightful.
 - Decisions
   - DejaVu Sans Mono is the best available font
 
-**** Publishing on a Computer
+**** TODO Publishing on a Computer
 
 - Research
   - WordPress is the primary environment
