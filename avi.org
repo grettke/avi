@@ -1,7 +1,8 @@
-#+PROPERTY: header-tangle :args .emacs.el
+#+PROPERTY: header-args :tangle .emacs.el
 #+STARTUP: showeverything
 * TODO AVI
-** TODO Philosophy 
+** TODO Philosophy
+*** TODO First Express Values, Then Define Means
 *** TODO Universal
 *** TODO Theory of Opposites
 *** TODO Representation of Decisions as Text in Storage
