@@ -304,6 +304,9 @@ that want. Use your discretion. Assume more notes will follow.
   - Do whatever you want, they are not final
 - Not sure whether or not to include references in headings
 - Patch was recently added to do so
+- Keep a single empty line before the start of the body of a heading and before
+  the next heading. Org-Mode expects this formatting. Headings will collapse and
+  expand as you expect.
 *** TODO List
 - Single sentence items end with a period
 *** TODO Names
