@@ -2173,16 +2173,16 @@ AVI provides complete and total distraction free operation. Information is fine
 as long as it has to do with files. AVI is only going to work with files and
 provide information about them. This holds true to her file-based worldview.
 
-** Communications  & Media
+** TODO Communications  & Media
 
 1) IRC will be in another application
 2) Email will be in another application
 3) Playing music will be in another application
 
-** Colors
+** TODO Colors
 
 1) Choose "quiet" tones that minimize eye strain
-   
+
 ** TODO Font
 
 *** TODO Introduction
