@@ -307,7 +307,7 @@ that want. Use your discretion. Assume more notes will follow.
 *** TODO List
 - Single sentence items end with a period
 *** TODO Names
-**** TODO Package
+**** TODO Packages And Artifacts
   - Referenced in written-language
     - Reading font
     - Capitalize whole words
