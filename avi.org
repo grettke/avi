@@ -653,7 +653,7 @@ that want. Use your discretion. Assume more notes will follow.
 
 ***** TODO Explain when to use one vs other
 
-* TODO Org-Mode
+* TODO Org-Mode Pre-Provisioning
 
 Installation and Configuration of Org-Mode in this heading only uses built-in
 libraries and does not use Org-Package.
