@@ -2874,7 +2874,108 @@ quite delightful.
   - PDF?
 
 * Provisioning
-  
+
+** Background
+
+In /the old days/, the way that you managed software packages for Emacs was to do
+it manually because there was no software distribution system available. In my
+case, I just put everything inside of a Subversion project and moved on. That
+actually worked fine, but I didn't like committing compiled code, and handling
+updates was always a hassle depending on how files and the directory structure
+had changed. Fortunately that all changed with the introduction of Package and
+ELPA.
+
+When I first cut my system over to ELPA I went with GNU ELPA and Marmalade.
+Eventually I found that they weren't the right thing for me since the former had
+a very small collection and the latter, strangely, had exactly what I wasn't
+looking for. About that time, MELPA was starting to really gain momentum.
+
+MELPA is really a community and a belief-system in addition to being a package
+repository. They value structure and form, and make sure that the package
+builds, and then they do the building for you. They are doing great things to
+create, nurture, and guide the community to define a higher standard for package
+quality. Around that time, too I got fed up with manually installing and
+worrying whether I had the packages installed or not, so after figuring that
+there was something better than some custom code that I wrote, I looked at Cask.
+
+Cask is a declarative approach for expressing dependencies. That sounds fancy
+but it isn't. Cask just makes it really easy to obtain ELPA packages from
+different repositories. One reason that I really like is that you see all of
+your packages in a single place rather than sprinkled about all over your
+initialization file. It also lowers the bar for new users to with just one line
+of code add a new repository. Something funny happened though, the more I
+learned about Emacs and the community, the more I found the need to manage
+software not hosted in MELPA.
+
+MELPA is perfect at what it does, and it is still evolving. Rather than try to
+plan for everything, they decided to solve 80% of most problems for most people
+and that is super. Now they are looking at how to handle versioned packages by
+hosting a stable repository that uses Git tags, and that is super, too. What
+about software that doesn't live in a package though?
+
+You start finding code all over not in packages. EmacsWiki is the exception
+given that MELPA supports that. What about random Emacs-Lisp code you find out
+on the 'Net? That question got me motivated to learn about other people's
+approaches for package management. That is where I learned about EL-Get.
+
+EL-Get is powerful, and flexible, and concise. What it lacks in community
+momentum, it makes up for in raw power. When I find code that doesn't live in
+packages, and may never, then I start setting up EL-Get to grab it for me.
+
+Based upon what I've read, it had its time in the sun. Its power is still true,
+and its value is a great, because it truly succeeds at the goals that it set out
+on.
+
+The first time I set up Cask, it was the only option for easily specifying which
+repository you wanted to use for installing a package. It was great. Then, I got
+the bug to be able to easily collaborate with others by sending them a single
+initialization file. Kind of a theoretical goal, but there is *one* person with
+whom I want to collaborate that makes it completely make sense. More than a year
+after switching from Subversion to Cask, I dug into the options out there today.
+
+My foray into EL-Get was kind of a mistake, since its role had changed in the
+community between then and its inception. I spent a lot of time not being
+productive there. Then I figured that Cask would be fine, but at the time
+it did not run easily on Windows, which is really important to me. Based on
+that, I quit pursuing Cask as an option. From what I read, Cask does now run
+easily on Windows, but I am not revisiting it for now.
+
+One mistake that I made here was assuming that recipes would be the same between
+EL-Get and Cask. Doh! Of course they wouldn't be. The nice side-effect here
+though was learning the power of EL-Get. It is very powerful.
+
+The great news as of 24.4 is that Package inside of Emacs allows you to specify
+the source repository from which to install a package. This is a hugely
+important feature and I am thrilled on all user's behalf's. The old problem was
+that sometimes you might want the stable version of Foo and something you want
+the development version of Foo. The problem was that you never quite knew which
+one you would get because the packages lived in *both* repositories! Now, it is no
+longer an issue, and one of the reasons that I don't need to use Cask anymore.
+Package should do it all, and it will, below. That was my plan. It failed.
+
+My approach was simple. First I identified all of the packages that I used that
+were available on MELPA Stable. Then added MELPA Stable as a repository and
+added all of those packages to =package-pinned-packages=. To help me out, I also
+added a separate entry just to pull MELPA packages that were not ELPA packages.
+On this setup, it worked about %75 of the time. I couldn't figure out why. I
+tried every permutation. I removed entries. It wasn't enough. It never worked
+right. Here is what it did:
+
+What is happening is simple
+- Delete the ELPA directory
+- Start this system
+- Packages that are pinned to MELPA Stable are installed from MELPA
+
+Long ago Steve Purcell asked someone on GitHub why they want stable. I don't
+recall the exact conversation. Perhaps I asked something. His answer was really
+simple. It was something like "Going with the TRUNK tends to be fine. If it
+breaks, it usually gets fixed quickly". I understood. I just *really* wanted to
+try the /reproducible research/ thing with this system. I was very gung-ho about
+it. It didn't work out though. Then I started loading everything from MELPA. At
+that point, everything worked _perfectly_. I tested it 5 times. I look forward to
+seeing how it works out in the future. It is certainly consistent with what
+Purcell shared.
+
 * TODO Accessibility
 
 ** TODO Philosophy
