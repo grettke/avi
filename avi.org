@@ -666,6 +666,38 @@ which had been byte-compiled. I am not doing that here.
 (setq load-prefer-newer t)
 #+end_src
 
+* Run-time
+  :PROPERTIES:
+  :noweb-ref: Runtime-Check
+  :END:
+
+Reproducibility is both the foundation of all good science, and, the thing that
+allows us to tell, and enjoy, jokes. This system is a little of both
+
+Paging through hundreds of Emacs related posts in my memory banks, there is a
+common decision shared with the reader /not/ to upgrade the Emacs version. This
+could be out of laziness, which makes total sense, and another good reason is
+that every new release brings change. Despite the fact that we are subject to
+decay, which is /just/ change, most humans don't like either. Change often brings
+pain, and hard work. To help alleviate some of the pain, this system will
+attempt to capture its configuration at a particular state in time to facilitate
+reproducibility. In practice, it will be a bit liberal, though.
+
+This system will only start with the correct version of Emacs, v24.4
+
+#+begin_src emacs-lisp
+(defun gcr/emacs-version-check ()
+  "Enforce version compliance."
+  (interactive)
+  (when (not (and (= emacs-major-version 24)
+              (= emacs-minor-version 4)))
+    (error
+     "Incorrect Emacs runtime. Expected v24.4. Found v%s.%s"
+     (number-to-string emacs-major-version)
+     (number-to-string emacs-minor-version))))
+(gcr/emacs-version-check)
+#+end_src
+
 ** TODO Installation
 
 *** TODO Bring in installation decision stuff from ALEC
