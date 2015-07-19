@@ -2181,7 +2181,7 @@ provide information about them. This holds true to her file-based worldview.
 
 ** Colors
 
-1) Choose "quiet" tones that minimalize eye strain
+1) Choose "quiet" tones that minimize eye strain
 
 * TODO Accessibility
 
