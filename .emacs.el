@@ -1,4 +1,49 @@
 
+;; [[file:~/src/avi/avi.org::*Helper%20Functions%20Pre-Provisioning][Helper\ Functions\ Pre-Provisioning:1]]
+
+(defun gcr/save-all-file-buffers (&rest ls)
+  "Saves every buffer associated with a file
+
+LS captures arguments when this is used as before advice."
+  (interactive)
+  (dolist (buf (buffer-list))
+    (with-current-buffer buf
+      (when (and (buffer-file-name) (buffer-modified-p))
+        (save-buffer)))))
+
+(defmacro gcr/on-gui (statement &rest statements)
+  "Evaluate the enclosed body only when run on GUI."
+  `(when (display-graphic-p)
+     ,statement
+     ,@statements))
+
+(defmacro gcr/on-gnu/linux (statement &rest statements)
+  "Evaluate the enclosed body only when run on GNU/Linux."
+  `(when (eq system-type 'gnu/linux)
+     ,statement
+     ,@statements))
+
+(defmacro gcr/on-osx (statement &rest statements)
+  "Evaluate the enclosed body only when run on OSX."
+  `(when (eq system-type 'darwin)
+     ,statement
+     ,@statements))
+
+(defmacro gcr/on-gnu/linux-or-osx (statement &rest statements)
+  "Evaluate the enclosed body only when run on GNU/Linux or OSX."
+  `(when (or (eq system-type 'gnu/linux)
+            (eq system-type 'darwin))
+     ,statement
+     ,@statements))
+
+(defmacro gcr/on-windows (statement &rest statements)
+  "Evaluate the enclosed body only when run on Microsoft Windows."
+  `(when (eq system-type 'windows-nt)
+     ,statement
+     ,@statements))
+
+;; Helper\ Functions\ Pre-Provisioning:1 ends here
+
 ;; [[file:~/src/avi/avi.org::*Start%20Up][Start\ Up:1]]
 
 (setq load-prefer-newer t)
@@ -336,24 +381,6 @@
 ;; Babel:1 ends here
 
 ;; [[file:~/src/avi/avi.org::*Babel][Babel:1]]
-
-(defun gcr/org-babel-tangle (orig-fun &rest args)
-  "Display tangling time."
-  (gcr/save-all-file-buffers)
-  (let ((start (current-time)))
-    (message (concat "org-babel-tangle BEFORE: <"
-                     (format-time-string "%Y-%m-%dT%T%z")
-                     ">"))
-    (apply orig-fun args)
-    (let* ((dur (float-time (time-since start)))
-           (msg (format "Tangling complete after: %.06f seconds" dur)))
-      (message (concat "org-babel-tangle AFTER: <"
-                       (format-time-string "%Y-%m-%dT%T%z")
-                       ">"))
-      (message msg)
-      (gcr/on-gui (alert msg :title "org-mode")))))
-
-(advice-add 'org-babel-tangle :around #'gcr/org-babel-tangle)
 
 (advice-add 'org-ascii-export-as-ascii :before #'gcr/save-all-file-buffers)
 
@@ -710,12 +737,7 @@ This is a copy and paste. Additional languages would warrant a refactor."
   (when (and (fboundp 'guide-key-mode) guide-key-mode)
     (guide-key/add-local-guide-key-sequence "C-c")
     (guide-key/add-local-guide-key-sequence "C-c C-x")
-    (guide-key/add-local-highlight-command-regexp "org-"))
-  (fci-mode)
-  (gcr/untabify-buffer-hook)
-  (turn-on-stripe-table-mode)
-  (linum-mode)
-  (wrap-region-mode t))
+    (guide-key/add-local-highlight-command-regexp "org-")))
 
 (add-hook 'org-mode-hook 'gcr/org-mode-hook)
 
@@ -763,6 +785,21 @@ This is a copy and paste. Additional languages would warrant a refactor."
 
 ;; Package\ &\ Use-Package:1 ends here
 
+;; [[file:~/src/avi/avi.org::*Alert][Alert:1]]
+
+(use-package alert
+             :ensure t
+             :if (display-graphic-p)
+             :config
+             (setq alert-fade-time 10)
+             (gcr/on-gui
+              (gcr/on-osx
+               (setq alert-default-style 'growl)))
+             (setq alert-reveal-idle-time 120)
+             )
+
+;; Alert:1 ends here
+
 ;; [[file:~/src/avi/avi.org::*Org-Mode%20Post-Provisioning][Org-Mode\ Post-Provisioning:1]]
 
 (use-package ob-sml
@@ -771,5 +808,27 @@ This is a copy and paste. Additional languages would warrant a refactor."
              (require 'ob-sml nil 'noerror)
              (add-to-list 'org-babel-load-languages
                           '(sml . t)))
+
+;; Org-Mode\ Post-Provisioning:1 ends here
+
+;; [[file:~/src/avi/avi.org::*Org-Mode%20Post-Provisioning][Org-Mode\ Post-Provisioning:1]]
+
+(defun gcr/org-babel-tangle (orig-fun &rest args)
+  "Display tangling time."
+  (gcr/save-all-file-buffers)
+  (let ((start (current-time)))
+    (message (concat "org-babel-tangle BEFORE: <"
+                     (format-time-string "%Y-%m-%dT%T%z")
+                     ">"))
+    (apply orig-fun args)
+    (let* ((dur (float-time (time-since start)))
+           (msg (format "Tangling complete after: %.06f seconds" dur)))
+      (message (concat "org-babel-tangle AFTER: <"
+                       (format-time-string "%Y-%m-%dT%T%z")
+                       ">"))
+      (message msg)
+      (gcr/on-gui (alert msg :title "org-mode")))))
+
+(advice-add 'org-babel-tangle :around #'gcr/org-babel-tangle)
 
 ;; Org-Mode\ Post-Provisioning:1 ends here

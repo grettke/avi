@@ -653,6 +653,55 @@ that want. Use your discretion. Assume more notes will follow.
 
 ***** TODO Explain when to use one vs other
 
+* TODO Helper Functions Pre-Provisioning
+
+These are functions used in the configuration and operation of Org-Mode.
+
+They do not rely on installation of any external packages.
+
+#+begin_src emacs-lisp
+(defun gcr/save-all-file-buffers (&rest ls)
+  "Saves every buffer associated with a file
+
+LS captures arguments when this is used as before advice."
+  (interactive)
+  (dolist (buf (buffer-list))
+    (with-current-buffer buf
+      (when (and (buffer-file-name) (buffer-modified-p))
+        (save-buffer)))))
+
+(defmacro gcr/on-gui (statement &rest statements)
+  "Evaluate the enclosed body only when run on GUI."
+  `(when (display-graphic-p)
+     ,statement
+     ,@statements))
+
+(defmacro gcr/on-gnu/linux (statement &rest statements)
+  "Evaluate the enclosed body only when run on GNU/Linux."
+  `(when (eq system-type 'gnu/linux)
+     ,statement
+     ,@statements))
+
+(defmacro gcr/on-osx (statement &rest statements)
+  "Evaluate the enclosed body only when run on OSX."
+  `(when (eq system-type 'darwin)
+     ,statement
+     ,@statements))
+
+(defmacro gcr/on-gnu/linux-or-osx (statement &rest statements)
+  "Evaluate the enclosed body only when run on GNU/Linux or OSX."
+  `(when (or (eq system-type 'gnu/linux)
+            (eq system-type 'darwin))
+     ,statement
+     ,@statements))
+
+(defmacro gcr/on-windows (statement &rest statements)
+  "Evaluate the enclosed body only when run on Microsoft Windows."
+  `(when (eq system-type 'windows-nt)
+     ,statement
+     ,@statements))
+#+end_src
+
 * TODO Org-Mode Pre-Provisioning
 
 Installation and Configuration of Org-Mode in this heading only uses built-in
@@ -1258,24 +1307,6 @@ Sometimes tangling and exporting takes a long time and I would like to see some
 status messages. Shell commands can report duration, too.
 
 #+begin_src emacs-lisp
-(defun gcr/org-babel-tangle (orig-fun &rest args)
-  "Display tangling time."
-  (gcr/save-all-file-buffers)
-  (let ((start (current-time)))
-    (message (concat "org-babel-tangle BEFORE: <"
-                     (format-time-string "%Y-%m-%dT%T%z")
-                     ">"))
-    (apply orig-fun args)
-    (let* ((dur (float-time (time-since start)))
-           (msg (format "Tangling complete after: %.06f seconds" dur)))
-      (message (concat "org-babel-tangle AFTER: <"
-                       (format-time-string "%Y-%m-%dT%T%z")
-                       ">"))
-      (message msg)
-      (gcr/on-gui (alert msg :title "org-mode")))))
-
-(advice-add 'org-babel-tangle :around #'gcr/org-babel-tangle)
-
 (advice-add 'org-ascii-export-as-ascii :before #'gcr/save-all-file-buffers)
 
 (defadvice org-html-export-to-html (before before-org-html-export-to-html activate)
@@ -2184,12 +2215,7 @@ in mind, RETURN is bound to that now. Now ALEC has four different kinds of
   (when (and (fboundp 'guide-key-mode) guide-key-mode)
     (guide-key/add-local-guide-key-sequence "C-c")
     (guide-key/add-local-guide-key-sequence "C-c C-x")
-    (guide-key/add-local-highlight-command-regexp "org-"))
-  (fci-mode)
-  (gcr/untabify-buffer-hook)
-  (turn-on-stripe-table-mode)
-  (linum-mode)
-  (wrap-region-mode t))
+    (guide-key/add-local-highlight-command-regexp "org-")))
 
 (add-hook 'org-mode-hook 'gcr/org-mode-hook)
 #+end_src
@@ -3016,7 +3042,35 @@ Use-Package will manage all of the package installations.
 (require 'use-package)
 #+end_src
 
-* TODO Helper Functions
+** Packages
+*** Alert
+
+Used on graphics systems for pretty notifications. It is helpful.
+
+For a while I went on a quest to get the =Message= buffer to include time-stamps
+on each entry. EmacsWiki had some decent approaches but none of them worked
+right for me and I didn't want to dig further. Eventually though I got tired of
+having to pay close attention to the minibuffer or =Messages= for stuff and
+just started looking for GUI options. The plan is to have =Messages= for most
+stuff and if there are alerts by any definition then I want that to be an
+option. First choice was todochiku [fn:4f2e6828: http://melpa.milkbox.net/#/todochiku] due to the high download count but
+two issues, it didn't work and it is not used by anything else. Alert [fn:fd4688ce: http://melpa.milkbox.net/#/alert],
+on the other hand, is, and also lives on Github meaning that it is maintainable.
+
+#+begin_src emacs-lisp
+(use-package alert
+             :ensure t
+             :if (display-graphic-p)
+             :config
+             (setq alert-fade-time 10)
+             (gcr/on-gui
+              (gcr/on-osx
+               (setq alert-default-style 'growl)))
+             (setq alert-reveal-idle-time 120)
+             )
+#+end_src
+
+* TODO Helper Functions Post-Provisioning
 * TODO Org-Mode Post-Provisioning
 
 Load the =ob-sml= package. Perhaps some day it will end up in the mainline.
@@ -3028,6 +3082,28 @@ Load the =ob-sml= package. Perhaps some day it will end up in the mainline.
              (require 'ob-sml nil 'noerror)
              (add-to-list 'org-babel-load-languages
                           '(sml . t)))
+#+end_src
+
+Notify the operator of tangle times.
+
+#+begin_src emacs-lisp
+(defun gcr/org-babel-tangle (orig-fun &rest args)
+  "Display tangling time."
+  (gcr/save-all-file-buffers)
+  (let ((start (current-time)))
+    (message (concat "org-babel-tangle BEFORE: <"
+                     (format-time-string "%Y-%m-%dT%T%z")
+                     ">"))
+    (apply orig-fun args)
+    (let* ((dur (float-time (time-since start)))
+           (msg (format "Tangling complete after: %.06f seconds" dur)))
+      (message (concat "org-babel-tangle AFTER: <"
+                       (format-time-string "%Y-%m-%dT%T%z")
+                       ">"))
+      (message msg)
+      (gcr/on-gui (alert msg :title "org-mode")))))
+
+(advice-add 'org-babel-tangle :around #'gcr/org-babel-tangle)
 #+end_src
 
 * TODO Accessibility
@@ -3064,6 +3140,13 @@ Load the =ob-sml= package. Perhaps some day it will end up in the mainline.
 # (gcr/on-gui
 #  (require 'org-mouse))
 # #+end_src
+
+# In the org mode hook
+  # (fci-mode)
+  # (gcr/untabify-buffer-hook)
+  # (turn-on-stripe-table-mode)
+  # (linum-mode)
+  # (wrap-region-mode t)
 
 # There is an auto-complete provider for org-mode [fn:a94049d3: https://github.com/aki2o/org-ac]. Nice as I didn't even
 # think to check. Perhaps a check should go on the standard setup list. This seems
