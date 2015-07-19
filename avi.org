@@ -14,7 +14,9 @@ It has occurred in three stages:
 1) Touched by Willful Determination (Sankalpa [fn:a8dd9e04: https://en.wikipedia.org/wiki/Sankalpa_(Hindu_thought)])
 2) Absorbed by the Expression of Creativity (Unique Purusha [fn:7b0aa25c: https://en.wikipedia.org/wiki/Purusha])
 3) Unification With Infinite Inspiration (Universal Purusha)
-
+**** TODO Sankalpa
+**** TODO Unique Purusha
+**** TODO Universal Purursha
 *** TODO First Express Values, Then Define Means
 *** TODO Universal
 *** TODO Theory of Opposites
