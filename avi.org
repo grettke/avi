@@ -1180,6 +1180,13 @@ known good state.
   (gcr/save-all-file-buffers))
 #+end_src
 
+Allow the mouse to do =org= things like expand and collapse headings.
+
+#+begin_src emacs-lisp
+(gcr/on-gui
+ (require 'org-mouse))
+#+end_src
+
 **** Babel
 
 There is a hook for things to do after a source block has been executed. This
@@ -3134,12 +3141,6 @@ Notify the operator of tangle times.
 - Appearance
 - Space Control
 - Need Magit ASAP
-
-# Allow the mouse to do =org= things like expand and collapse headings.
-# #+begin_src emacs-lisp
-# (gcr/on-gui
-#  (require 'org-mouse))
-# #+end_src
 
 # In the org mode hook
   # (fci-mode)

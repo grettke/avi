@@ -281,6 +281,13 @@ LS captures arguments when this is used as before advice."
 
 ;; Org:1 ends here
 
+;; [[file:~/src/avi/avi.org::*Org][Org:1]]
+
+(gcr/on-gui
+ (require 'org-mouse))
+
+;; Org:1 ends here
+
 ;; [[file:~/src/avi/avi.org::*Babel][Babel:1]]
 
 (defun gcr/org-babel-after-execute-hook ()
