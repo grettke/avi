@@ -666,10 +666,7 @@ which had been byte-compiled. I am not doing that here.
 (setq load-prefer-newer t)
 #+end_src
 
-* Run-time
-  :PROPERTIES:
-  :noweb-ref: Runtime-Check
-  :END:
+** TODO Run-time
 
 Reproducibility is both the foundation of all good science, and, the thing that
 allows us to tell, and enjoy, jokes. This system is a little of both
