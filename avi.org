@@ -2,6 +2,19 @@
 #+STARTUP: showeverything
 * TODO AVI
 ** TODO Philosophy
+
+We are all seekers. We are moved by an unseen gravity. Our path is illuminated
+by an unseen light. We discover those infinite and mysterious dimensions of
+ourselves. In the process we change and then the world changes. Then we become
+part of the world and all of creation again. Attempting to capture one path, I
+recorded this journey here.
+
+It has occurred in three stages:
+
+1) Touched by Willful Determination (Sankalpa [fn:a8dd9e04: https://en.wikipedia.org/wiki/Sankalpa_(Hindu_thought)])
+2) Absorbed by the Expression of Creativity (Unique Purusha [fn:7b0aa25c: https://en.wikipedia.org/wiki/Purusha])
+3) Unification With Infinite Inspiration (Universal Purusha)
+
 *** TODO First Express Values, Then Define Means
 *** TODO Universal
 *** TODO Theory of Opposites
@@ -70,8 +83,8 @@ predictable. It is a fine software product. AVI needs access to cutting edge fea
 creation. The easiest way to do this is the "Using Org's git repository" option. Before you start this set up, find out what
 version of Org-Mode is built-in.
 
-Start EMACS with the =-Q= argument so that only the built-libraries are loaded. Open the =*scratch*= buffer and evaluate the 
-expression =(org-version)=. Note it because the  code will load a newer version of Org-Mode. Quit EMACS. 
+Start EMACS with the =-Q= argument so that only the built-libraries are loaded. Open the =*scratch*= buffer and evaluate the
+expression =(org-version)=. Note it because the  code will load a newer version of Org-Mode. Quit EMACS.
 
 Follow these instructions in a terminal:
 - =cd ~=
@@ -93,7 +106,7 @@ Load the Org-Mode-Contributions distribution.
 (add-to-list 'load-path "~/src/org-mode/contrib/lisp")
 #+end_src
 
-Start EMACS normally. 
+Start EMACS normally.
 
 *** TODO Decide if the setup steps should be tangled into a provisioning script to be executed before first-load. Consider
     the OSX provsioning experiment
