@@ -287,7 +287,7 @@ Where else has this acronym shown up?
 
 ***** TODO Import All Of Alec
 
-* Ends & Means
+***** Ends & Means
 
 There are so many ways to customize a system. Is intent or pragmatics more
 important? In my philosophy, the nature of the /end/ is contained within the
@@ -307,7 +307,7 @@ but it didn't read well. It might make sense from a reference perspective, but
 that was about it. This document focuses more on the flow. Since the fundamental
 means /ought/ to be concise, they are intended to be read at a single sitting.
 
-* Ends (ALEC)
+***** Ends (ALEC)
 
 This system has changed who I am and how I think. Because it is easier to focus
 on the tools rather than the intent, on the means versus the ends, I focus on this
@@ -385,7 +385,7 @@ like the petals of the lotus, retaining its sweet fragrance, can, will, and must
 fade, but, we will shine on in the sweet embrace of Mother Sun, knowing that
 loving and warm embrace of sweet perfection, in our one, and true, home.
 
-** The desire
+****** The desire
 
 "I want". If only all conversations would start out with a clear goal in mind.
 All too often we waste our own, and other people's time talking and simply
@@ -421,7 +421,7 @@ come within even light-years, of power that you are granted for working with a
 computer as that metamedium, that GNU Emacs [fn:54b16b1c: https://www.gnu.org/software/emacs/]. With that in mind,
 the following is what I actually want to do with it.
 
-** The story
+****** The story
 
 The creativity that you apply and capture to assemble your system… this is where
 all of the fun stuff is. Let me elaborate, everything in your artifacts are
@@ -452,7 +452,7 @@ a flawless, rational, and logical human being to:
 - Deliver an adaptable system
 - Deliver an expandable system
 
-** Inspirations
+****** Inspirations
 
 - Eric Weisstein :: Creator of MathWorld [fn:f0123b05: http://mathworld.wolfram.com/about/author.html]
 
